@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasilyShadi.in — Find Your Right Life Partner</title>
+  <meta name="description" content="EasilyShadi.in - A modern matrimonial platform to discover suitable profiles and unlock contact details for ₹51.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#d62962;
+  --primary-dark:#ad1f4c;
+  --soft:#fff0f5;
+  --soft-2:#fff7fa;
+  --ink:#211a21;
+  --muted:#756d73;
+  --line:#eee2e8;
+  --card:#ffffff;
+  --shadow:0 24px 70px rgba(77,24,44,.11);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Manrope",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#fff;
+  color:var(--ink);
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,88%);margin:auto}
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(238,226,232,.85);
+}
+.nav-wrap{height:76px;display:flex;align-items:center;justify-content:space-between;width:min(1180px,88%);margin:auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.5px}
+.brand-mark{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#ff7ba3,var(--primary));color:#fff;box-shadow:0 8px 24px rgba(214,41,98,.24)}
+.brand-dot{color:var(--primary)}
+.desktop-nav{display:flex;align-items:center;gap:24px}
+.desktop-nav>a{font-size:14px;color:#575056;font-weight:600}
+.nav-login,.nav-cta{border:0;font-weight:800}
+.nav-login{background:transparent;color:var(--ink)}
+.nav-cta{background:var(--primary);color:#fff;padding:12px 18px;border-radius:12px;box-shadow:0 8px 22px rgba(214,41,98,.18)}
+.menu-btn{display:none;border:0;background:#fff0f5;width:42px;height:42px;border-radius:12px;font-size:20px}
+.mobile-menu{display:none;padding:12px 6% 18px;background:#fff;border-top:1px solid var(--line)}
+.mobile-menu.show{display:grid;gap:10px}
+.mobile-menu a,.mobile-menu button{padding:12px;border:0;background:#fff;text-align:left;border-radius:10px;font-weight:700}
+.mobile-menu .mobile-cta{background:var(--primary);color:#fff;text-align:center}
+
+.hero-section{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 10%,rgba(255,214,229,.7),transparent 24%),
+    radial-gradient(circle at 90% 20%,rgba(255,229,237,.95),transparent 30%),
+    linear-gradient(180deg,#fff9fb 0%,#fff 100%);
+  padding:86px 0 80px;
+}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(10px);opacity:.55}
+.glow-one{width:300px;height:300px;background:#ffd5e2;right:-90px;top:120px}
+.glow-two{width:180px;height:180px;background:#ffe8ef;left:-40px;bottom:20px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f2dce4;padding:9px 13px;border-radius:30px;color:#a62450;font-weight:800;font-size:12px;box-shadow:0 8px 30px rgba(100,32,55,.06)}
+.hero-copy h1{font-family:"Playfair Display",serif;font-size:70px;line-height:.98;letter-spacing:-2px;margin:20px 0 22px;max-width:680px}
+.hero-copy h1 span{display:block;color:var(--primary)}
+.hero-text{font-size:18px;line-height:1.75;color:var(--muted);max-width:620px}
+.hero-actions{display:flex;gap:12px;margin-top:30px}
+.btn-primary,.btn-soft{border:0;border-radius:13px;padding:14px 20px;font-weight:800}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 26px rgba(214,41,98,.22)}
+.btn-soft{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.hero-proof{display:flex;align-items:center;gap:14px;margin-top:34px}
+.proof-avatars{display:flex}
+.proof-avatars span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f7d7e1;color:#a6224c;font-size:12px;font-weight:800;border:2px solid #fff;margin-left:-7px}
+.proof-avatars span:first-child{margin-left:0}
+.hero-proof b,.hero-proof small{display:block}
+.hero-proof b{font-size:13px}
+.hero-proof small{font-size:11px;color:#8b8288;margin-top:3px}
+
+.hero-visual{position:relative;min-height:500px;display:grid;place-items:center}
+.feature-card{width:min(420px,100%);background:#fff;border-radius:28px;overflow:hidden;border:1px solid #f3e2e8;box-shadow:0 28px 85px rgba(81,27,46,.17);transform:rotate(1.2deg)}
+.cover-gradient{height:210px;position:relative;background:linear-gradient(135deg,#ffe3ec,#f9c4d6 48%,#efa1bc);display:grid;place-items:center}
+.profile-photo-large{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#fff,#f3b0c5);font-family:"Playfair Display",serif;font-size:60px;color:#bd2a58;border:6px solid rgba(255,255,255,.8);box-shadow:0 12px 35px rgba(126,39,67,.15)}
+.match-pill{position:absolute;right:18px;top:18px;background:#fff;color:var(--primary);font-weight:800;font-size:12px;padding:8px 10px;border-radius:20px;box-shadow:0 8px 24px rgba(79,25,43,.08)}
+.feature-content{padding:22px}
+.name-row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.name-row h3{margin:0 0 4px;font-size:22px}.name-row p{margin:0;color:var(--muted);font-size:13px}
+.verified{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eaf8f0;color:#218a52;font-weight:900}
+.detail-chips{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}
+.detail-chips span{background:#fff4f7;color:#6a5660;border:1px solid #f2e3e8;padding:7px 9px;border-radius:20px;font-size:11px;font-weight:700}
+.feature-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.feature-actions button{border-radius:11px;padding:12px;font-weight:800}
+.ghost-btn{background:#fff;border:1px solid var(--line)}
+.pink-btn{background:var(--primary);color:#fff;border:1px solid var(--primary)}
+.floating-note{position:absolute;background:#fff;border:1px solid #f0dce4;box-shadow:0 15px 38px rgba(93,29,50,.12);border-radius:13px;padding:11px 14px;font-size:12px;font-weight:800;z-index:3}
+.note-top{left:-20px;top:55px}.note-bottom{right:-5px;bottom:52px}
+
+.search-section{margin-top:-28px;position:relative;z-index:5}
+.search-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.search-heading span{font-size:12px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:1.2px}
+.search-heading h2{margin:5px 0 20px;font-size:27px;letter-spacing:-.8px}
+.search-controls{display:grid;grid-template-columns:1fr 1fr 1.2fr auto;gap:12px;align-items:end}
+.search-controls label>span{display:block;font-size:11px;font-weight:800;color:#70676d;margin-bottom:7px}
+.search-controls select,.search-controls input{width:100%;height:50px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 13px;outline:none;color:#3f383d}
+.search-controls select:focus,.search-controls input:focus{border-color:#e9a3bb;box-shadow:0 0 0 4px #fff0f5}
+.search-btn{height:50px;border:0;border-radius:12px;background:#231c22;color:#fff;padding:0 24px;font-weight:800}
+
+.how-section,.profiles-section,.safety-section{padding:92px 0}
+.section-title.center{text-align:center;max-width:720px;margin:0 auto 42px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:900;letter-spacing:1.5px;color:var(--primary);margin-bottom:8px}
+.section-title h2{font-family:"Playfair Display",serif;font-size:42px;line-height:1.08;margin:0 0 12px;letter-spacing:-1px}
+.section-title p{margin:0;color:var(--muted);line-height:1.7}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;min-height:250px;box-shadow:0 10px 30px rgba(75,24,42,.04)}
+.step-num{position:absolute;right:18px;top:16px;font-size:11px;font-weight:900;color:#cfc3c8}
+.step-icon{font-size:30px;margin-bottom:30px}
+.step-card h3{margin:0 0 9px;font-size:17px}
+.step-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.highlight-step{background:linear-gradient(145deg,#fff0f5,#fff);border-color:#f3bfd0}
+
+.profiles-section{background:#fff8fa}
+.row-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+.row-title h2{margin-bottom:0}
+.results-badge{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:20px;font-size:12px;color:#776d73;font-weight:700}
+.profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.profile-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s;box-shadow:0 10px 32px rgba(79,23,43,.045)}
+.profile-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(79,23,43,.11)}
+.profile-image{height:230px;background:linear-gradient(140deg,#ffe8f0,#f7cbd9);position:relative;display:grid;place-items:center}
+.profile-initial{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.65);border:5px solid rgba(255,255,255,.7);font-family:"Playfair Display",serif;font-size:48px;color:#b52b56}
+.card-match{position:absolute;top:14px;right:14px;background:#fff;color:var(--primary);padding:7px 9px;border-radius:18px;font-size:11px;font-weight:900}
+.card-verified{position:absolute;left:14px;top:14px;background:#eefaf3;color:#218a52;padding:7px 9px;border-radius:18px;font-size:10px;font-weight:900}
+.profile-body{padding:18px}
+.profile-top{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.profile-top h3{margin:0 0 5px;font-size:20px}.profile-top p{margin:0;color:#7b7177;font-size:12px}
+.heart-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:#c52959;font-size:18px}
+.profile-meta{display:grid;gap:7px;margin:15px 0 17px}
+.profile-meta span{font-size:12px;color:#655c62}
+.profile-meta b{color:#332b30}
+.card-actions{display:grid;grid-template-columns:.95fr 1.05fr;gap:8px}
+.card-actions button{border-radius:11px;padding:11px 10px;font-weight:800;font-size:12px}
+.view-btn{background:#fff;border:1px solid var(--line)}
+.contact-btn{background:var(--primary);color:#fff;border:1px solid var(--primary)}
+.no-results{display:none;text-align:center;padding:55px 0;color:#766d72}.no-results>div{font-size:36px}.no-results h3{margin:10px 0 5px}.no-results p{margin:0}
+
+.value-section{padding:100px 0;background:#221a20;color:#fff}
+.value-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.value-copy h2{font-family:"Playfair Display",serif;font-size:46px;line-height:1.08;margin:4px 0 16px}
+.value-copy p{color:#d1c6cc;line-height:1.75;max-width:620px}
+.feature-list{list-style:none;padding:0;margin:26px 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feature-list li{color:#f0e8ec;font-size:13px}.feature-list li span{color:#ff8daf;margin-right:8px;font-weight:900}
+.price-panel{background:#fff;color:var(--ink);border-radius:26px;padding:32px;box-shadow:0 28px 65px rgba(0,0,0,.18)}
+.mini-label{font-size:10px;font-weight:900;letter-spacing:1.3px;color:var(--primary)}
+.price-row{display:flex;align-items:flex-start;margin:14px 0 0}.price-row span{font-size:22px;margin-top:11px}.price-row b{font-size:70px;line-height:1;font-family:"Playfair Display",serif}
+.price-panel>p{color:var(--muted);margin:6px 0 20px}
+.price-divider{height:1px;background:var(--line);margin:18px 0}
+.price-feature{padding:8px 0;color:#5f565c;font-size:13px}
+.price-button{width:100%;margin-top:20px;border:0;background:var(--primary);color:#fff;border-radius:12px;padding:13px;font-weight:800}
+
+.safety-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.safety-card{border:1px solid var(--line);border-radius:19px;padding:24px;background:#fff}
+.safety-card>div{font-size:26px;margin-bottom:18px}.safety-card h3{margin:0 0 8px}.safety-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+
+.cta-section{padding:10px 0 90px}
+.cta-box{background:linear-gradient(135deg,#d62962,#a51d49);border-radius:28px;padding:46px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;box-shadow:0 25px 60px rgba(166,29,73,.24)}
+.cta-box h2{font-family:"Playfair Display",serif;font-size:38px;margin:5px 0 9px;max-width:700px}
+.cta-box p{margin:0;color:#ffe5ee}
+.eyebrow.light{color:#ffd4e1}.cta-box button{border:0;background:#fff;color:#b31f4e;padding:14px 20px;border-radius:12px;font-weight:900;white-space:nowrap}
+
+.footer{background:#171116;color:#fff;padding:60px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}
+.footer .brand{display:inline-flex}.footer-brand p{color:#a99fa5;font-size:13px;margin-top:14px}
+.footer h4{font-size:13px;margin:0 0 16px}.footer-grid>div:not(.footer-brand){display:grid;align-content:start;gap:9px}
+.footer-grid a:not(.brand){font-size:12px;color:#aaa0a6}
+.footer-bottom{border-top:1px solid #30252d;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;color:#81767d;font-size:11px}
+
+.modal{display:none;position:fixed;inset:0;background:rgba(25,14,20,.72);backdrop-filter:blur(8px);z-index:300;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-card{position:relative;width:min(520px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:24px;padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.28)}
+.close{position:absolute;right:14px;top:14px;width:36px;height:36px;border:0;border-radius:50%;background:#f8eff3;color:#4a3e45;font-size:23px;line-height:1}
+.auth-modal{text-align:center;max-width:430px}.auth-brand{width:54px;height:54px;border-radius:17px;margin:0 auto 14px;display:grid;place-items:center;background:linear-gradient(135deg,#ff7da5,#d62962);color:#fff;font-size:22px}
+.auth-modal h2{font-family:"Playfair Display",serif;font-size:34px;margin:4px 0 7px}.auth-modal>p{color:var(--muted);font-size:13px}
+.auth-form{display:grid;gap:12px;margin-top:22px;text-align:left}.auth-form label span{display:block;font-size:11px;font-weight:800;margin-bottom:6px;color:#6f656b}.auth-form input{width:100%;padding:13px;border:1px solid var(--line);border-radius:11px;outline:none}
+.auth-submit,.otp-btn{width:100%;border-radius:11px;padding:13px;font-weight:800}.auth-submit{border:0;background:var(--primary);color:#fff}.otp-btn{border:1px solid var(--line);background:#fff}
+.auth-or{display:flex;align-items:center;gap:10px;color:#aaa;margin:16px 0}.auth-or:before,.auth-or:after{content:"";height:1px;background:var(--line);flex:1}.auth-or span{font-size:11px}
+.auth-switch{color:var(--primary)!important;font-weight:800;cursor:pointer;margin-top:18px!important}
+.payment-modal{text-align:center;max-width:430px}.lock-circle{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#fff0f5;margin:0 auto 14px;font-size:26px}
+.payment-modal h2{font-family:"Playfair Display",serif;font-size:34px;margin:3px 0 6px}.payment-modal>p{font-size:13px;color:var(--muted)}
+.payment-price{background:#fff7fa;border:1px solid #f3dfe7;border-radius:17px;padding:18px;margin:18px 0}.payment-price small,.payment-price span{display:block}.payment-price small{font-size:9px;font-weight:900;letter-spacing:1.1px;color:#a76b80}.payment-price strong{display:block;font-family:"Playfair Display",serif;font-size:55px;color:var(--primary);line-height:1.1}.payment-price span{font-size:11px;color:#897d84}
+.payment-points{display:grid;gap:8px;text-align:left;margin:16px 0}.payment-points span{font-size:12px;color:#5f565c}
+.pay-btn{width:100%;border:0;background:var(--primary);color:#fff;padding:13px;border-radius:12px;font-weight:900}.demo-note{font-size:10px!important;color:#9a8f95!important;margin-top:12px!important}
+.success-modal{text-align:center;max-width:440px}.success-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#eaf8f0;color:#19824a;font-size:28px;font-weight:900;margin:0 auto 14px}.success-modal h2{font-family:"Playfair Display",serif;font-size:34px;margin:5px 0}.success-modal>p{font-size:13px;color:var(--muted)}
+.contact-preview{margin:20px 0;text-align:left;background:#faf6f8;border:1px solid var(--line);border-radius:14px;padding:15px;display:grid;gap:8px}.contact-preview div{font-size:12px}.contact-preview b{display:inline-block;width:90px}.full-width{width:100%;border:0}
+.profile-modal-card{max-width:620px}.detail-cover{height:200px;border-radius:18px;background:linear-gradient(135deg,#ffe6ef,#f4bfd1);display:grid;place-items:center;margin-bottom:20px}.detail-avatar{width:112px;height:112px;border-radius:50%;background:#ffffffaa;border:5px solid #fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:52px;color:#b42753}.detail-heading{display:flex;justify-content:space-between;gap:15px}.detail-heading h2{font-family:"Playfair Display",serif;font-size:33px;margin:0}.detail-heading p{margin:5px 0 0;color:var(--muted);font-size:12px}.detail-match{background:#fff0f5;color:var(--primary);padding:8px 10px;border-radius:20px;height:max-content;font-size:11px;font-weight:900}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.detail-box{background:#faf6f8;border:1px solid #f0e6ea;border-radius:12px;padding:12px}.detail-box small{display:block;color:#988d93;font-size:9px;font-weight:900;letter-spacing:.6px;margin-bottom:5px}.detail-box b{font-size:12px}
+.locked-contact{background:#fff0f5;border:1px solid #f2ccd9;border-radius:13px;padding:15px;margin-top:10px}.locked-contact b{display:block;font-size:13px}.locked-contact span{font-size:11px;color:#786a71}
+.profile-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.profile-modal-actions button{padding:12px;border-radius:11px;font-weight:800}.interest-outline{background:#fff;border:1px solid var(--line)}.unlock-now{background:var(--primary);border:1px solid var(--primary);color:#fff}
+
+@media(max-width:980px){
+  .desktop-nav{display:none}.menu-btn{display:block}
+  .hero-grid,.value-grid{grid-template-columns:1fr;gap:45px}
+  .hero-copy{text-align:center}.hero-text{margin-left:auto;margin-right:auto}.hero-actions,.hero-proof{justify-content:center}
+  .hero-visual{min-height:430px}
+  .search-controls{grid-template-columns:1fr 1fr}
+  .search-btn{grid-column:span 2}
+  .steps-grid,.safety-grid{grid-template-columns:1fr 1fr}
+  .profile-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+  .footer-grid>div:last-child{grid-column:2}
+}
+@media(max-width:640px){
+  .container,.nav-wrap{width:min(92%,1180px)}
+  .topbar .brand{font-size:18px}.brand-mark{width:32px;height:32px}
+  .hero-section{padding-top:58px}.hero-copy h1{font-size:48px}.hero-text{font-size:15px}
+  .hero-actions{flex-direction:column}.hero-actions>*{width:100%;text-align:center}
+  .hero-proof{align-items:flex-start;text-align:left}
+  .hero-visual{min-height:390px}.feature-card{transform:none}.floating-note{display:none}
+  .search-section{margin-top:-12px}.search-card{padding:18px}.search-controls{grid-template-columns:1fr}.search-btn{grid-column:auto}
+  .how-section,.profiles-section,.safety-section{padding:70px 0}
+  .section-title h2{font-size:35px}.row-title{align-items:flex-start;gap:20px}.results-badge{white-space:nowrap}
+  .steps-grid,.profile-grid,.safety-grid{grid-template-columns:1fr}
+  .value-section{padding:75px 0}.value-copy h2{font-size:38px}.feature-list{grid-template-columns:1fr}
+  .price-row b{font-size:60px}
+  .cta-box{padding:30px;display:block}.cta-box h2{font-size:32px}.cta-box button{margin-top:20px;width:100%}
+  .footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-grid>div:last-child{grid-column:auto}.footer-bottom{display:grid;gap:7px}
+  .profile-modal-actions,.detail-grid{grid-template-columns:1fr}
+}
+
+
+/* Firebase / live profile additions */
+.results-side{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.firebase-status{font-size:11px;color:#6d6269;font-weight:700}
+.search-controls{grid-template-columns:repeat(6,1fr)!important}
+.search-clear{padding:13px 14px!important}
+.live-profile-badge{position:absolute;right:12px;bottom:12px;background:#fff;color:#13864a;padding:5px 8px;border-radius:999px;font-size:9px;font-weight:900;letter-spacing:.5px}
+.create-profile-section{padding:28px 0}
+.create-profile-panel{background:linear-gradient(135deg,#fff3f7,#fff);border:1px solid #f0dce4;border-radius:26px;padding:32px;display:flex;justify-content:space-between;gap:28px;align-items:center}
+.create-profile-panel h2{margin:7px 0 10px;font-family:"Playfair Display",serif;font-size:36px}
+.create-profile-panel p{color:var(--muted);line-height:1.7;max-width:700px}
+.profile-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:#7c6871;font-size:12px;font-weight:800;margin-top:18px}
+.profile-flow span{background:#fff;border:1px solid var(--line);padding:8px 10px;border-radius:999px}
+.create-profile-actions{min-width:240px;display:grid;gap:10px}
+.account-status{font-size:12px;color:#6c6268;text-align:center;font-weight:700}
+.logout-small{justify-content:center}
+.profile-editor-modal{width:min(900px,94vw);max-height:90vh;overflow:auto}
+.editor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.profile-editor-modal label{display:grid;gap:7px;font-size:12px;font-weight:800;color:#51484d}
+.profile-editor-modal input,.profile-editor-modal select,.profile-editor-modal textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 13px;outline:none;background:#fff}
+.profile-editor-modal input:focus,.profile-editor-modal select:focus,.profile-editor-modal textarea:focus{border-color:#df7396;box-shadow:0 0 0 3px #fff0f5}
+.full-editor-field{margin-top:14px}
+.photo-upload-row{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.photo-upload-row input{flex:1;min-width:220px}
+.publish-row{display:flex!important;grid-template-columns:none!important;align-items:center;gap:9px;margin-top:16px}
+.publish-row input{width:18px!important}
+.editor-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.profile-save-msg{margin-top:10px;color:#13864a;font-weight:800;font-size:13px;min-height:20px}
+.auth-error{font-size:12px;color:#b3264d;min-height:18px;font-weight:700}
+.about-profile{margin-top:16px;background:#fff8fa;border:1px solid #f1dfe6;padding:16px;border-radius:14px}
+.about-profile small{font-size:10px;font-weight:900;color:#8c6874}
+.about-profile p{margin:7px 0 0;color:#63585e;line-height:1.7}
+@media(max-width:980px){
+  .search-controls{grid-template-columns:repeat(2,1fr)!important}
+  .create-profile-panel{display:grid}
+}
+@media(max-width:640px){
+  .search-controls{grid-template-columns:1fr!important}
+  .results-side{align-items:flex-start}
+  .create-profile-panel{padding:24px 18px}
+  .create-profile-panel h2{font-size:29px}
+  .editor-grid{grid-template-columns:1fr}
+  .profile-editor-modal{padding:22px}
+}
+
+
+/* Mobile auth modal fix */
+.auth-modal{
+  width:min(430px,calc(100vw - 28px)) !important;
+  max-width:430px !important;
+  box-sizing:border-box;
+  overflow-x:hidden;
+}
+.auth-modal *{box-sizing:border-box;max-width:100%}
+.auth-modal h2{overflow-wrap:anywhere}
+.auth-modal p{overflow-wrap:anywhere}
+.otp-btn{display:block;min-height:48px;cursor:pointer}
+.otp-area{display:none;text-align:left;margin-top:14px}
+.otp-area.show{display:grid;gap:11px}
+.otp-area label span{display:block;font-size:11px;font-weight:800;margin-bottom:6px;color:#6f656b}
+.otp-area input{width:100%;box-sizing:border-box;padding:13px;border:1px solid var(--line);border-radius:11px;outline:none}
+.otp-send,.otp-verify{width:100%;border:0;border-radius:11px;padding:13px;font-weight:800;background:var(--primary);color:#fff;cursor:pointer}
+.otp-verify{background:#211a21}
+.otp-msg{font-size:12px;line-height:1.5;min-height:18px;color:#6b6067}
+.recaptcha-box{display:flex;justify-content:center;min-height:0;overflow:hidden}
+@media(max-width:640px){
+  .modal{padding:10px !important}
+  .auth-modal{padding:22px 18px !important;width:calc(100vw - 20px) !important;max-height:88vh}
+  .auth-modal h2{font-size:30px;line-height:1.08}
+  .auth-modal>p{font-size:13px;line-height:1.45}
+}
+
+
+.search-controls{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:980px){.search-controls{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:640px){.search-controls{grid-template-columns:1fr!important}}
+
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="nav-wrap">
+    <a class="brand" href="#home">
+      <span class="brand-mark">❤</span>
+      <span>EasilyShadi<span class="brand-dot">.in</span></span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#how">How it works</a>
+      <a href="#matches">Matches</a>
+      <a href="#safety">Safety</a>
+      <button class="nav-login" id="loginBtn" onclick="openAuth('login')">Login</button>
+      <button class="nav-cta" onclick="startCreateProfile()">Create Profile</button>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">☰</button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how" onclick="toggleMobileMenu()">How it works</a>
+    <a href="#matches" onclick="toggleMobileMenu()">Matches</a>
+    <a href="#safety" onclick="toggleMobileMenu()">Safety</a>
+    <button onclick="openAuth('login')">Login</button>
+    <button class="mobile-cta" onclick="openAuth('signup')">Create Profile</button>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero-section">
+  <div class="hero-glow glow-one"></div>
+  <div class="hero-glow glow-two"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span>♥</span>
+        Modern matrimonial platform
+      </div>
+
+      <h1>
+        Find someone
+        <span>meant for you.</span>
+      </h1>
+
+      <p class="hero-text">
+        Discover meaningful profiles, shortlist the ones you like and unlock verified contact details only when you choose.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#search" class="btn-primary">Start Searching</a>
+        <button class="btn-soft" onclick="startCreateProfile()">Create Free Profile</button>
+      </div>
+
+      <div class="hero-proof">
+        <div class="proof-avatars">
+          <span>A</span><span>R</span><span>N</span><span>P</span>
+        </div>
+        <div>
+          <b>Simple & transparent</b>
+          <small>No membership. Pay only when you unlock a contact.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="floating-note note-top">✓ Profile verified</div>
+      <div class="feature-card">
+        <div class="cover-gradient">
+          <div class="profile-photo-large">A</div>
+          <span class="match-pill">94% Match</span>
+        </div>
+        <div class="feature-content">
+          <div class="name-row">
+            <div>
+              <h3>Ananya, 26</h3>
+              <p>Lucknow, Uttar Pradesh</p>
+            </div>
+            <span class="verified">✓</span>
+          </div>
+
+          <div class="detail-chips">
+            <span>Software Professional</span>
+            <span>B.Tech</span>
+            <span>Never Married</span>
+          </div>
+
+          <div class="feature-actions">
+            <button class="ghost-btn">♡ Shortlist</button>
+            <button class="pink-btn">♥ Send Interest</button>
+          </div>
+        </div>
+      </div>
+      <div class="floating-note note-bottom">🔒 Contact unlock ₹51</div>
+    </div>
+  </div>
+</section>
+
+<section class="search-section" id="search">
+  <div class="container">
+    <div class="search-card">
+      <div class="search-heading">
+        <span>Find your match</span>
+        <h2>Start with what matters to you</h2>
+      </div>
+
+      <div class="search-controls">
+        <label>
+          <span>Looking for</span>
+          <select id="gender">
+            <option value="all">Anyone</option>
+            <option value="female">Bride</option>
+            <option value="male">Groom</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Age</span>
+          <select id="age">
+            <option value="all">Any age</option>
+            <option value="20-25">20–25</option>
+            <option value="26-30">26–30</option>
+            <option value="31-35">31–35</option>
+          </select>
+        </label>
+        <label>
+          <span>District</span>
+          <input id="district" placeholder="e.g. Deoria">
+        </label>
+        <label>
+          <span>State</span>
+          <input id="stateSearch" placeholder="e.g. Uttar Pradesh">
+        </label>
+
+        <button class="search-btn" onclick="filterProfiles()">Search Matches</button><button class="btn-soft search-clear" type="button" onclick="clearSearch()">Clear</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-title center">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Simple steps. Serious connections.</h2>
+      <p>You stay in control from the first search to the first conversation.</p>
+    </div>
+
+    <div class="steps-grid">
+      <article class="step-card">
+        <span class="step-num">01</span>
+        <div class="step-icon">👤</div>
+        <h3>Create your profile</h3>
+        <p>Add basic details, preferences and photos to build a complete matrimonial profile.</p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-num">02</span>
+        <div class="step-icon">🔎</div>
+        <h3>Explore matches</h3>
+        <p>Search and filter profiles by age, district and other important preferences.</p>
+      </article>
+
+      <article class="step-card">
+        <span class="step-num">03</span>
+        <div class="step-icon">❤</div>
+        <h3>Show interest</h3>
+        <p>Shortlist profiles or send an interest when someone feels right for you.</p>
+      </article>
+
+      <article class="step-card highlight-step">
+        <span class="step-num">04</span>
+        <div class="step-icon">🔓</div>
+        <h3>Unlock contact for ₹51</h3>
+        <p>No membership plans. Pay only when you choose to unlock a profile's contact.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="profiles-section" id="matches">
+  <div class="container">
+    <div class="section-title row-title">
+      <div>
+        <span class="eyebrow">RECOMMENDED</span>
+        <h2>Profiles you may like</h2>
+      </div>
+      <div class="results-side"><span class="results-badge" id="resultCount">6 profiles found</span><span class="firebase-status" id="firebaseStatus">Connecting Firebase…</span></div>
+    </div>
+
+    <div class="profile-grid" id="profileGrid"></div>
+
+    <div class="no-results" id="noResults">
+      <div>🔎</div>
+      <h3>No matching profiles found</h3>
+      <p>Try changing the age, district or partner preference.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="create-profile-section" id="create-profile">
+  <div class="container create-profile-panel">
+    <div>
+      <span class="eyebrow">YOUR PROFILE</span>
+      <h2>Apni profile complete kijiye</h2>
+      <p>Basic details भरकर profile publish करें। Publish होने के बाद आपकी profile search results में City और District के हिसाब से दिखाई देगी.</p>
+      <div class="profile-flow">
+        <span>1. Account बनाएं</span><span>→</span><span>2. Details भरें</span><span>→</span><span>3. Publish करें</span>
+      </div>
+    </div>
+    <div class="create-profile-actions">
+      <button class="btn-primary" type="button" onclick="openProfileEditor()">Complete / Edit Profile</button>
+      <button class="btn-soft" type="button" onclick="openAuth('signup')">Create Account</button>
+      <div class="account-status" id="accountStatus">Not logged in</div>
+      <button class="btn-soft logout-small" id="logoutBtn" type="button" onclick="logoutUser()" style="display:none">Logout</button>
+    </div>
+  </div>
+</section>
+
+<section class="value-section">
+  <div class="container value-grid">
+    <div class="value-copy">
+      <span class="eyebrow">WHY EASILYSHADI</span>
+      <h2>No confusing plans. No forced subscription.</h2>
+      <p>
+        Create a profile, search and explore freely. When you genuinely want to contact someone, unlock that profile's contact for ₹51.
+      </p>
+
+      <ul class="feature-list">
+        <li><span>✓</span> Free profile creation</li>
+        <li><span>✓</span> Free search and browsing</li>
+        <li><span>✓</span> Free shortlist and interests</li>
+        <li><span>✓</span> ₹51 only for each contact unlock</li>
+      </ul>
+
+      <button class="btn-primary" onclick="openAuth('signup')">Create My Profile</button>
+    </div>
+
+    <div class="price-panel">
+      <div class="mini-label">PAY ONLY WHEN NEEDED</div>
+      <div class="price-row"><span>₹</span><b>51</b></div>
+      <p>Per profile contact unlock</p>
+
+      <div class="price-divider"></div>
+
+      <div class="price-feature">✓ No monthly plan</div>
+      <div class="price-feature">✓ No yearly membership</div>
+      <div class="price-feature">✓ Clear one-time price</div>
+      <div class="price-feature">✓ Unlock only the profiles you choose</div>
+
+      <button class="price-button" onclick="document.getElementById('matches').scrollIntoView({behavior:'smooth'})">
+        Explore Profiles
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="safety-section" id="safety">
+  <div class="container">
+    <div class="section-title center">
+      <span class="eyebrow">TRUST & SAFETY</span>
+      <h2>Built around privacy and control</h2>
+      <p>Safety features should be part of the platform from day one, not added later.</p>
+    </div>
+
+    <div class="safety-grid">
+      <div class="safety-card"><div>🛡️</div><h3>Profile review</h3><p>Profiles can be checked and moderated before full visibility.</p></div>
+      <div class="safety-card"><div>🔒</div><h3>Protected contact</h3><p>Phone details remain locked until the contact unlock step.</p></div>
+      <div class="safety-card"><div>🚩</div><h3>Report & block</h3><p>Users can report suspicious profiles and block unwanted contact.</p></div>
+      <div class="safety-card"><div>👁️</div><h3>Privacy controls</h3><p>Users will be able to manage who can view photos and personal details.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-box">
+    <div>
+      <span class="eyebrow light">START TODAY</span>
+      <h2>Your next meaningful connection could start here.</h2>
+      <p>Create your profile and begin discovering suitable matches.</p>
+    </div>
+    <button onclick="startCreateProfile()">Create Free Profile</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#home"><span class="brand-mark">❤</span><span>EasilyShadi<span class="brand-dot">.in</span></span></a>
+      <p>Apna sahi jeevan saathi, easily.</p>
+    </div>
+
+    <div>
+      <h4>Platform</h4>
+      <a href="#matches">Browse Matches</a>
+      <a href="#how">How it works</a>
+      <a href="#safety">Safety</a>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <a href="#">Help Centre</a>
+      <a href="#">Report Profile</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Refund Policy</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 EasilyShadi.in. All rights reserved.</span>
+    <span>Made for meaningful connections.</span>
+  </div>
+</footer>
+
+<!-- PROFILE MODAL -->
+<div class="modal" id="profileModal">
+  <div class="modal-card profile-modal-card">
+    <button class="close" onclick="closeModal('profileModal')">×</button>
+    <div id="profileDetail"></div>
+  </div>
+</div>
+
+<!-- AUTH MODAL -->
+<div class="modal" id="authModal">
+  <div class="modal-card auth-modal">
+    <button class="close" onclick="closeModal('authModal')">×</button>
+
+    <div class="auth-brand">❤</div>
+    <span class="eyebrow">EASILYSHADI.IN</span>
+    <h2 id="authTitle">Welcome back</h2>
+    <p id="authSub">Login to continue to your account.</p>
+
+    <div class="auth-form">
+      <label>
+        <span>Email</span>
+        <input id="emailField" type="email" placeholder="you@example.com" autocomplete="email">
+      </label>
+      <label>
+        <span>Password</span>
+        <input id="passwordField" type="password" placeholder="Minimum 6 characters" autocomplete="current-password">
+      </label>
+      <button class="auth-submit" type="button" onclick="submitAuth()">Continue</button>
+      <div class="auth-error" id="authError"></div><div id="firebaseAuthHint" style="font-size:11px;color:#81757b;margin-top:7px;line-height:1.5">Firebase account system ready.</div>
+    </div>
+
+    <div class="auth-or"><span>Firebase Authentication</span></div>
+    
+<button class="otp-btn" id="otpOpenBtn" type="button" onclick="openOtpLogin()">Continue with Mobile OTP</button>
+
+<div class="otp-area" id="otpArea">
+  <label>
+    <span>Mobile Number</span>
+    <input id="otpPhone" type="tel" inputmode="tel" placeholder="+91 9876543210" autocomplete="tel">
+  </label>
+  <div class="recaptcha-box" id="recaptcha-container"></div>
+  <button class="otp-send" id="otpSendBtn" type="button" onclick="sendMobileOtp()">Send OTP</button>
+
+  <label id="otpCodeWrap" style="display:none">
+    <span>OTP</span>
+    <input id="otpCode" type="text" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP" autocomplete="one-time-code">
+  </label>
+  <button class="otp-verify" id="otpVerifyBtn" type="button" style="display:none" onclick="verifyMobileOtp()">Verify OTP</button>
+  <div class="otp-msg" id="otpMsg"></div>
+</div>
+
+
+    <p class="auth-switch" id="authSwitch" onclick="toggleAuth()">New here? Create your profile</p>
+  </div>
+</div>
+
+
+<!-- FIREBASE PROFILE EDITOR -->
+<div class="modal" id="profileEditorModal">
+  <div class="modal-card profile-editor-modal">
+    <button class="close" type="button" onclick="closeModal('profileEditorModal')">×</button>
+    <span class="eyebrow">FIREBASE PROFILE</span>
+    <h2 id="profileFormTitle">Complete your profile</h2>
+    <p>Age 18+ profiles only. District भरना जरूरी है ताकि location search सही चले.</p>
+    <form id="profileForm" onsubmit="saveProfile(event)">
+      <div class="editor-grid">
+        <label><span>Full Name *</span><input id="profileName" required></label>
+        <label><span>Age * (18+)</span><input id="profileAge" type="number" min="18" max="80" required></label>
+        <label><span>Gender *</span>
+          <select id="profileGender" required><option value="">Select</option><option value="female">Bride</option><option value="male">Groom</option></select>
+        </label>
+        <label><span>State *</span><input id="profileState" value="Uttar Pradesh" required></label>
+        <label><span>District *</span><input id="profileDistrict" required placeholder="e.g. Deoria"></label>
+        <label><span>Profession</span><input id="profileJob" placeholder="Teacher / Business / Engineer"></label>
+        <label><span>Education</span><input id="profileEducation" placeholder="B.A. / B.Tech / MBA"></label>
+        <label><span>Marital Status</span><input id="profileStatus" value="Never Married"></label>
+        <label><span>Height</span><input id="profileHeight" placeholder="5'6&quot;"></label>
+        <label><span>Language</span><input id="profileLanguage" value="Hindi"></label>
+        <label><span>Phone</span><input id="profilePhone" type="tel" placeholder="Contact number (protected)"></label>
+      </div>
+      <label class="full-editor-field"><span>About You</span><textarea id="profileAbout" rows="4" placeholder="Apne baare mein short description..."></textarea></label>
+      <label class="full-editor-field"><span>Profile Photo URL</span><input id="profilePhotoURL" placeholder="https://..."></label>
+      <div class="photo-upload-row">
+        <input id="profilePhotoFile" type="file" accept="image/*">
+        <button class="btn-soft" type="button" onclick="uploadProfilePhoto()">Upload Photo to Firebase</button>
+      </div>
+      <label class="publish-row"><input id="publishProfile" type="checkbox" checked><span>Profile publish करें और search में दिखाएँ</span></label>
+      <div class="editor-actions">
+        <button class="btn-soft" type="button" onclick="closeModal('profileEditorModal')">Cancel</button>
+        <button class="btn-primary" type="submit">Save Profile</button>
+      </div>
+      <div class="profile-save-msg" id="profileSaveMsg"></div>
+    </form>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal" id="paymentModal">
+  <div class="modal-card payment-modal">
+    <button class="close" onclick="closeModal('paymentModal')">×</button>
+
+    <div class="lock-circle">🔒</div>
+    <span class="eyebrow">CONTACT UNLOCK</span>
+    <h2>Unlock contact details</h2>
+    <p id="payProfileName">Unlock this profile's contact details.</p>
+
+    <div class="payment-price">
+      <small>ONE-TIME PAYMENT</small>
+      <strong>₹51</strong>
+      <span>for this profile</span>
+    </div>
+
+    <div class="payment-points">
+      <span>✓ View contact number</span>
+      <span>✓ View approved contact information</span>
+      <span>✓ No membership required</span>
+    </div>
+
+    <button class="pay-btn" onclick="simulatePayment()">Pay ₹51 & Unlock</button>
+    <p class="demo-note">Demo checkout only. Live payment verification will be connected later.</p>
+  </div>
+</div>
+
+<!-- DEMO SUCCESS -->
+<div class="modal" id="successModal">
+  <div class="modal-card success-modal">
+    <button class="close" onclick="closeModal('successModal')">×</button>
+    <div class="success-icon">✓</div>
+    <h2>Contact unlocked</h2>
+    <p>This is a demo contact preview. Production contact details will load only after verified payment.</p>
+    <div class="contact-preview" id="contactPreview"></div>
+    <button class="btn-primary full-width" onclick="closeModal('successModal')">Done</button>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {
+  getFirestore, collection, getDocs, doc, getDoc, setDoc, serverTimestamp,
+  query, where, limit
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {
+  getAuth, onAuthStateChanged, createUserWithEmailAndPassword,
+  signInWithEmailAndPassword, signOut, updateProfile, RecaptchaVerifier, signInWithPhoneNumber
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import {
+  getStorage, ref, uploadBytes, getDownloadURL
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDDufb2t6vj8WNETg8oqyBf9FtO4MOlfPs",
+  authDomain: "afbshop-355e1.firebaseapp.com",
+  projectId: "afbshop-355e1",
+  storageBucket: "afbshop-355e1.appspot.com",
+  messagingSenderId: "607607033369",
+  appId: "1:607607033369:web:b505b30fe89336ebc1a488",
+  measurementId: "G-MGP0CP80XR"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
+
+let currentUser = null;
+let firebaseProfiles = [];
+let selectedProfile = null;
+let signupMode = false;
+
+const demoProfiles = [
+  {id:"demo1",name:"Ananya",age:26,gender:"female",district:"Lucknow",state:"Uttar Pradesh",job:"Software Professional",education:"B.Tech",status:"Never Married",initial:"A",match:94,verified:true,height:"5'4\"",language:"Hindi",source:"demo"},
+  {id:"demo2",name:"Rahul",age:28,gender:"male",district:"Gorakhpur",state:"Uttar Pradesh",job:"Business Owner",education:"MBA",status:"Never Married",initial:"R",match:91,verified:true,height:"5'9\"",language:"Hindi",source:"demo"},
+  {id:"demo3",name:"Neha",age:24,gender:"female",district:"Deoria",state:"Uttar Pradesh",job:"Teacher",education:"M.A.",status:"Never Married",initial:"N",match:89,verified:true,height:"5'3\"",language:"Hindi",source:"demo"},
+  {id:"demo4",name:"Aditya",age:30,gender:"male",district:"Lucknow",state:"Uttar Pradesh",job:"Bank Professional",education:"M.Com",status:"Never Married",initial:"A",match:87,verified:false,height:"5'10\"",language:"Hindi",source:"demo"},
+  {id:"demo5",name:"Priya",age:27,gender:"female",district:"Varanasi",state:"Uttar Pradesh",job:"Doctor",education:"MBBS",status:"Never Married",initial:"P",match:92,verified:true,height:"5'5\"",language:"Hindi",source:"demo"},
+  {id:"demo6",name:"Arjun",age:25,gender:"male",district:"Kanpur Nagar",state:"Uttar Pradesh",job:"Engineer",education:"B.Tech",status:"Never Married",initial:"A",match:88,verified:true,height:"5'8\"",language:"Hindi",source:"demo"}
+];
+
+const $ = id => document.getElementById(id);
+const norm = v => String(v || "").trim().toLowerCase().replace(/\s+/g," ");
+
+function escapeHtml(v){
+  return String(v ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]));
+}
+
+async function loadFirebaseProfiles(){
+  try{
+    const q = query(collection(db,"profiles"), where("published","==",true), limit(500));
+    const snap = await getDocs(q);
+    firebaseProfiles = snap.docs.map(d => ({id:d.id, ...d.data(), source:"firebase"}));
+    window.allProfiles = [...firebaseProfiles, ...demoProfiles];
+    renderProfiles(window.allProfiles);
+    $("firebaseStatus").textContent = `Firebase connected • ${firebaseProfiles.length} live profile${firebaseProfiles.length===1?"":"s"}`;
+  }catch(err){
+    console.error(err);
+    window.allProfiles = [...demoProfiles];
+    renderProfiles(window.allProfiles);
+    $("firebaseStatus").textContent = "Firebase connected, but profiles could not be loaded. Check Firestore rules.";
+  }
+}
+
+function renderProfiles(list = window.allProfiles || demoProfiles){
+  const grid = $("profileGrid"), noResults = $("noResults");
+  $("resultCount").textContent = `${list.length} profile${list.length===1?"":"s"} found`;
+  noResults.style.display = list.length ? "none" : "block";
+  grid.innerHTML = list.map(p => `
+    <article class="profile-card">
+      <div class="profile-image" ${p.photoURL ? `style="background-image:url('${escapeHtml(p.photoURL)}');background-size:cover;background-position:center"` : ""}>
+        ${!p.photoURL ? `<div class="profile-initial">${escapeHtml((p.initial || p.name || "?").charAt(0).toUpperCase())}</div>` : ""}
+        ${p.verified ? `<span class="card-verified">✓ VERIFIED</span>` : ""}
+        <span class="card-match">${p.match || 0}% MATCH</span>
+        ${p.source === "firebase" ? `<span class="live-profile-badge">LIVE PROFILE</span>` : ""}
+      </div>
+      <div class="profile-body">
+        <div class="profile-top">
+          <div>
+            <h3>${escapeHtml(p.name)}, ${escapeHtml(p.age)}</h3>
+            <p>${escapeHtml(p.district || "District not added")}, ${escapeHtml(p.state || "Uttar Pradesh")}</p>
+          </div>
+          <button class="heart-btn" type="button" onclick="toggleHeart(this)">♡</button>
+        </div>
+        <div class="profile-meta">
+          <span><b>${escapeHtml(p.job || "Profession not added")}</b></span>
+          <span>${escapeHtml(p.education || "Education not added")} • ${escapeHtml(p.height || "Height not added")} • ${escapeHtml(p.status || "Status not added")}</span>
+        </div>
+        <div class="card-actions">
+          <button class="view-btn" type="button" onclick="viewProfile('${String(p.id).replace(/'/g,"\\'")}')">View Profile</button>
+          <button class="contact-btn" type="button" onclick="unlockContact('${String(p.id).replace(/'/g,"\\'")}')">🔒 Contact ₹51</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+function filterProfiles(){
+  const gender = $("gender").value;
+  const age = $("age").value;
+  const district = norm($("district").value);
+  const state = norm($("stateSearch").value);
+
+  let list = (window.allProfiles || demoProfiles).filter(p => {
+    const genderOK = gender === "all" || norm(p.gender) === gender;
+    const districtOK = !district || norm(p.district) === district || norm(p.district).includes(district);
+    const stateOK = !state || norm(p.state).includes(state);
+    return genderOK && districtOK && stateOK;
+  });
+
+  if(age !== "all"){
+    const [min,max] = age.split("-").map(Number);
+    list = list.filter(p => Number(p.age) >= min && Number(p.age) <= max);
+  }
+  renderProfiles(list);
+}
+
+function clearSearch(){
+  $("gender").value="all"; $("age").value="all"; $("district").value=""; $("stateSearch").value="";
+  renderProfiles(window.allProfiles || demoProfiles);
+}
+
+async function viewProfile(id){
+  const p = (window.allProfiles || demoProfiles).find(x => String(x.id) === String(id));
+  if(!p) return;
+  selectedProfile = p;
+  $("profileDetail").innerHTML = `
+    <div class="detail-cover" ${p.photoURL ? `style="background-image:url('${escapeHtml(p.photoURL)}');background-size:cover;background-position:center"` : ""}>
+      ${!p.photoURL ? `<div class="detail-avatar">${escapeHtml((p.initial || p.name || "?").charAt(0).toUpperCase())}</div>` : ""}
+    </div>
+    <div class="detail-heading">
+      <div>
+        <h2>${escapeHtml(p.name)}, ${escapeHtml(p.age)} ${p.verified ? "✓" : ""}</h2>
+        <p>${escapeHtml(p.district || "District not added")}, ${escapeHtml(p.state || "Uttar Pradesh")} • ${escapeHtml(p.job || "")}</p>
+      </div>
+      <span class="detail-match">${p.match || 0}% MATCH</span>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-box"><small>EDUCATION</small><b>${escapeHtml(p.education || "Not added")}</b></div>
+      <div class="detail-box"><small>MARITAL STATUS</small><b>${escapeHtml(p.status || "Not added")}</b></div>
+      <div class="detail-box"><small>HEIGHT</small><b>${escapeHtml(p.height || "Not added")}</b></div>
+      <div class="detail-box"><small>LANGUAGE</small><b>${escapeHtml(p.language || "Not added")}</b></div>
+      <div class="detail-box"><small>DISTRICT</small><b>${escapeHtml(p.district || "Not added")}</b></div>
+      <div class="detail-box"><small>PROFESSION</small><b>${escapeHtml(p.job || "Not added")}</b></div>
+    </div>
+    ${p.about ? `<div class="about-profile"><small>ABOUT</small><p>${escapeHtml(p.about)}</p></div>` : ""}
+    <div class="locked-contact">
+      <b>🔒 Contact details are protected</b>
+      <span>Unlock this profile's approved contact information for ₹51.</span>
+    </div>
+    <div class="profile-modal-actions">
+      <button class="interest-outline" type="button" onclick="sendInterest('${String(p.id).replace(/'/g,"\\'")}')">♥ Send Interest</button>
+      <button class="unlock-now" type="button" onclick="unlockContact('${String(p.id).replace(/'/g,"\\'")}')">Unlock Contact ₹51</button>
+    </div>`;
+  showModal("profileModal");
+}
+
+function unlockContact(id){
+  const p = (window.allProfiles || demoProfiles).find(x => String(x.id) === String(id));
+  if(!p) return;
+  selectedProfile = p;
+  $("payProfileName").textContent = `Unlock ${p.name}'s approved contact details.`;
+  closeModal("profileModal");
+  showModal("paymentModal");
+}
+
+function simulatePayment(){
+  if(!selectedProfile) return;
+  closeModal("paymentModal");
+  $("contactPreview").innerHTML = `
+    <div><b>Name</b> ${escapeHtml(selectedProfile.name)}</div>
+    <div><b>Phone</b> +91 98XXXXXX21</div>
+    <div><b>District</b> ${escapeHtml(selectedProfile.district || "")}</div>
+    <div><b>Status</b> Demo contact unlocked</div>`;
+  showModal("successModal");
+}
+
+async function sendInterest(id){
+  if(!currentUser){
+    closeModal("profileModal");
+    openAuth("login");
+    $("authSub").textContent = "Login first to send an interest.";
+    return;
+  }
+  try{
+    const p = (window.allProfiles || demoProfiles).find(x => String(x.id) === String(id));
+    await setDoc(doc(db,"interests",`${currentUser.uid}_${id}`),{
+      fromUid:currentUser.uid,toProfileId:String(id),toName:p?.name||"",
+      createdAt:serverTimestamp(),status:"sent"
+    },{merge:true});
+    alert("Interest sent successfully.");
+  }catch(err){ alert("Interest save nahi hua. Firestore rules check karein."); console.error(err); }
+}
+
+
+function startCreateProfile(){
+  if(currentUser){
+    openProfileEditor();
+  }else{
+    openAuth("signup");
+  }
+}
+
+function openAuth(type){
+  signupMode = type === "signup";
+  phoneConfirmation = null;
+  if(phoneRecaptcha){ try{ phoneRecaptcha.clear(); }catch(_){} phoneRecaptcha=null; }
+  const otpAreaEl = $("otpArea");
+  if(otpAreaEl) otpAreaEl.classList.remove("show");
+  if($("otpCodeWrap")) $("otpCodeWrap").style.display="none";
+  if($("otpVerifyBtn")) $("otpVerifyBtn").style.display="none";
+  if($("otpMsg")) $("otpMsg").textContent="";
+  if($("recaptcha-container")) $("recaptcha-container").innerHTML="";
+  $("authTitle").textContent = signupMode ? "Create your EasilyShadi account" : "Welcome back";
+  $("authSub").textContent = signupMode ? "Create an account, then complete your matrimonial profile." : "Login to continue.";
+  $("authSwitch").textContent = signupMode ? "Already have an account? Login" : "New here? Create your profile";
+  $("emailField").value=""; $("passwordField").value=""; $("authError").textContent="";
+  showModal("authModal");
+  $("mobileMenu").classList.remove("show");
+}
+
+function toggleAuth(){ openAuth(signupMode ? "login" : "signup"); }
+
+async function submitAuth(){
+  const email = $("emailField").value.trim();
+  const password = $("passwordField").value;
+
+  if(!email || password.length < 6){
+    $("authError").textContent = "Email aur kam se kam 6 character password dijiye.";
+    return;
+  }
+
+  $("authError").textContent = "Account create ho raha hai...";
+
+  try{
+    if(signupMode){
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+      try{
+        await updateProfile(cred.user, {
+          displayName: email.split("@")[0]
+        });
+      }catch(profileErr){
+        console.warn("Display name update skipped:", profileErr);
+      }
+
+      $("authError").textContent = "✓ Account ban gaya. Profile complete kijiye.";
+      setTimeout(() => {
+        closeModal("authModal");
+        openProfileEditor();
+      }, 400);
+
+    }else{
+      await signInWithEmailAndPassword(auth, email, password);
+      $("authError").textContent = "✓ Login successful.";
+      setTimeout(() => closeModal("authModal"), 300);
+    }
+
+  }catch(err){
+    console.error("Firebase Auth Error:", err);
+
+    const messages = {
+      "auth/email-already-in-use":
+        "Ye email pehle se registered hai. Login mode me jaakar login karein.",
+      "auth/invalid-email":
+        "Email address sahi format me dijiye.",
+      "auth/weak-password":
+        "Password kam se kam 6 characters ka hona chahiye.",
+      "auth/invalid-credential":
+        "Email ya password galat hai.",
+      "auth/user-not-found":
+        "Is email se account nahi mila. Pehle account create karein.",
+      "auth/wrong-password":
+        "Password galat hai.",
+      "auth/operation-not-allowed":
+        "Firebase Console me Email/Password sign-in enable nahi hai.",
+      "auth/network-request-failed":
+        "Internet/Firebase connection problem hai.",
+      "auth/configuration-not-found":
+        "Firebase Authentication configuration incomplete hai."
+    };
+
+    $("authError").textContent =
+      firebaseConfigErrorMessage(err) ||
+      messages[err.code] ||
+      `Firebase error: ${err.code || "unknown-error"}`;
+
+    if(err.code === "auth/email-already-in-use"){
+      setTimeout(() => {
+        signupMode = false;
+        $("authTitle").textContent = "Welcome back";
+        $("authSub").textContent =
+          "Ye email already registered hai. Password डालकर login karein.";
+        $("authSwitch").textContent = "New here? Create your profile";
+      }, 700);
+    }
+  }
+}
+
+let phoneConfirmation = null;
+let phoneRecaptcha = null;
+
+function openOtpLogin(){
+  const area = $("otpArea");
+  if(!area) return;
+
+  area.classList.add("show");
+  $("otpMsg").textContent =
+    "Mobile number +91 ke saath डालें.";
+
+  if(phoneRecaptcha) return;
+
+  try{
+    phoneRecaptcha = new RecaptchaVerifier(auth, "recaptcha-container", {
+      size: "normal",
+      callback: () => {
+        $("otpMsg").textContent =
+          "reCAPTCHA verified. Ab Send OTP dabaiye.";
+      },
+      "expired-callback": () => {
+        $("otpMsg").textContent =
+          "reCAPTCHA expire ho gaya. Dobara verify karein.";
+      }
+    });
+
+    phoneRecaptcha.render().catch(err => {
+      console.error("reCAPTCHA render:", err);
+    });
+
+  }catch(err){
+    console.error("reCAPTCHA setup:", err);
+    $("otpMsg").textContent =
+      "reCAPTCHA load nahi hua. Firebase Phone Authentication enable karein.";
+  }
+}
+
+function normalizeIndianPhone(value){
+  const raw = String(value || "").replace(/[^\d+]/g, "");
+
+  if(/^0\d{10}$/.test(raw)) return "+91" + raw.slice(1);
+  if(/^\d{10}$/.test(raw)) return "+91" + raw;
+  if(/^\+91\d{10}$/.test(raw)) return raw;
+
+  return "";
+}
+
+async function sendMobileOtp(){
+  const phone = normalizeIndianPhone($("otpPhone").value);
+
+  if(!phone){
+    $("otpMsg").textContent =
+      "Valid 10-digit Indian mobile number डालें.";
+    return;
+  }
+
+  if(!phoneRecaptcha){
+    openOtpLogin();
+    $("otpMsg").textContent =
+      "reCAPTCHA verify hone ka wait karein.";
+    return;
+  }
+
+  $("otpSendBtn").disabled = true;
+  $("otpSendBtn").textContent = "Sending OTP...";
+
+  try{
+    phoneConfirmation =
+      await signInWithPhoneNumber(auth, phone, phoneRecaptcha);
+
+    $("otpCodeWrap").style.display = "grid";
+    $("otpVerifyBtn").style.display = "block";
+    $("otpMsg").textContent =
+      "OTP भेज दिया गया है. SMS वाला 6-digit OTP डालें.";
+
+    $("otpCode").focus();
+
+  }catch(err){
+    console.error("Phone OTP:", err);
+
+    const messages = {
+      "auth/invalid-phone-number":
+        "Mobile number valid nahi hai.",
+      "auth/operation-not-allowed":
+        "Firebase Console me Phone sign-in enable karein.",
+      "auth/quota-exceeded":
+        "Firebase SMS quota exceed ho gaya hai.",
+      "auth/too-many-requests":
+        "Bahut attempts ho gaye. Thodi der baad try karein.",
+      "auth/captcha-check-failed":
+        "reCAPTCHA verification fail hui."
+    };
+
+    $("otpMsg").textContent =
+      messages[err.code] ||
+      "OTP send nahi hua. Firebase Phone Authentication settings check karein.";
+
+    try{
+      if(phoneRecaptcha) phoneRecaptcha.clear();
+    }catch(_){}
+
+    phoneRecaptcha = null;
+
+  }finally{
+    $("otpSendBtn").disabled = false;
+    $("otpSendBtn").textContent = "Send OTP";
+  }
+}
+
+async function verifyMobileOtp(){
+  const code = $("otpCode").value.trim();
+
+  if(!phoneConfirmation){
+    $("otpMsg").textContent = "Pehle Send OTP dabaiye.";
+    return;
+  }
+
+  if(!/^\d{6}$/.test(code)){
+    $("otpMsg").textContent = "6-digit OTP डालें.";
+    return;
+  }
+
+  $("otpVerifyBtn").disabled = true;
+  $("otpVerifyBtn").textContent = "Verifying...";
+
+  try{
+    await phoneConfirmation.confirm(code);
+
+    $("otpMsg").textContent =
+      "✓ Mobile verified. Login successful.";
+
+    setTimeout(() => {
+      closeModal("authModal");
+      openProfileEditor();
+    }, 500);
+
+  }catch(err){
+    console.error("OTP verify:", err);
+
+    $("otpMsg").textContent =
+      err.code === "auth/invalid-verification-code"
+        ? "OTP गलत है. सही 6-digit OTP डालें."
+        : "OTP verification failed. Dobara try karein.";
+
+  }finally{
+    $("otpVerifyBtn").disabled = false;
+    $("otpVerifyBtn").textContent = "Verify OTP";
+  }
+}
+
+
+
+async function openProfileEditor(){
+  if(!currentUser){
+    openAuth("signup");
+    return;
+  }
+
+  const ids = [
+    "profileName","profileAge","profileGender","profileState","profileDistrict",
+    "profileJob","profileEducation","profileStatus","profileHeight",
+    "profileLanguage","profilePhone","profileAbout","profilePhotoURL"
+  ];
+
+  ids.forEach(id => { if($(id)) $(id).value = ""; });
+
+  $("profileState").value = "Uttar Pradesh";
+  $("profileStatus").value = "Never Married";
+  $("profileLanguage").value = "Hindi";
+  $("publishProfile").checked = true;
+  $("profileFormTitle").textContent = "Complete your profile";
+  $("profileSaveMsg").textContent = "";
+
+  try{
+    const snap = await getDoc(doc(db,"profiles",currentUser.uid));
+
+    if(snap.exists()){
+      const p = snap.data();
+
+      $("profileName").value = p.name || currentUser.displayName || "";
+      $("profileAge").value = p.age || "";
+      $("profileGender").value = p.gender || "";
+      $("profileState").value = p.state || "Uttar Pradesh";
+      $("profileDistrict").value = p.district || "";
+      $("profileJob").value = p.job || "";
+      $("profileEducation").value = p.education || "";
+      $("profileStatus").value = p.status || "Never Married";
+      $("profileHeight").value = p.height || "";
+      $("profileLanguage").value = p.language || "Hindi";
+      $("profilePhone").value = p.phone || "";
+      $("profileAbout").value = p.about || "";
+      $("profilePhotoURL").value = p.photoURL || "";
+      $("publishProfile").checked = p.published !== false;
+
+      $("profileFormTitle").textContent = "Edit your profile";
+    }
+
+    showModal("profileEditorModal");
+
+  }catch(err){
+    console.error("Profile load error:", err);
+    showModal("profileEditorModal");
+    $("profileSaveMsg").textContent =
+      "Form open ho gaya. Save karte waqt Firebase error aaye to Firestore enable/rules check karein.";
+  }
+}
+
+async function saveProfile(event){
+  event.preventDefault();
+
+  if(!currentUser){
+    $("profileSaveMsg").textContent = "Pehle account/login complete karein.";
+    return;
+  }
+
+  const name = $("profileName").value.trim();
+  const age = Number($("profileAge").value);
+  const gender = $("profileGender").value;
+  const state = $("profileState").value.trim();
+  const district = $("profileDistrict").value.trim();
+
+  if(!name || !age || age < 18 || !gender || !state || !district){
+    $("profileSaveMsg").textContent =
+      "Name, age (18+), gender, state aur district zaroor bharein.";
+    return;
+  }
+
+  const saveBtn = document.querySelector("#profileForm button[type='submit']");
+  if(saveBtn){
+    saveBtn.disabled = true;
+    saveBtn.textContent = "Saving...";
+  }
+
+  $("profileSaveMsg").textContent = "Firebase me profile save ho rahi hai...";
+
+  const profile = {
+    uid: currentUser.uid,
+    name,
+    age,
+    gender,
+    state,
+    district,
+    job: $("profileJob").value.trim(),
+    education: $("profileEducation").value.trim(),
+    status: $("profileStatus").value.trim() || "Never Married",
+    height: $("profileHeight").value.trim(),
+    language: $("profileLanguage").value.trim() || "Hindi",
+    phone: $("profilePhone").value.trim(),
+    about: $("profileAbout").value.trim(),
+    photoURL: $("profilePhotoURL").value.trim(),
+    published: $("publishProfile").checked,
+    updatedAt: serverTimestamp(),
+    createdBy: currentUser.uid
+  };
+
+  try{
+    const existing = await getDoc(doc(db,"profiles",currentUser.uid));
+
+    if(!existing.exists()){
+      profile.createdAt = serverTimestamp();
+    }
+
+    await setDoc(
+      doc(db,"profiles",currentUser.uid),
+      profile,
+      {merge:true}
+    );
+
+    $("profileSaveMsg").textContent =
+      profile.published
+        ? "✓ Profile save aur publish ho gayi. Ab District search me dikh sakti hai."
+        : "✓ Profile save ho gayi. Publish checkbox off hai, isliye search me nahi dikhegi.";
+
+    await loadFirebaseProfiles();
+
+    setTimeout(() => {
+      closeModal("profileEditorModal");
+    }, 900);
+
+  }catch(err){
+    console.error("Profile save error:", err);
+
+    const msg = {
+      "permission-denied":
+        "Firestore permission denied. firestore.rules publish karein.",
+      "failed-precondition":
+        "Firestore database setup incomplete hai.",
+      "unavailable":
+        "Internet/Firebase server unavailable hai."
+    };
+
+    $("profileSaveMsg").textContent =
+      msg[err.code] ||
+      `Profile save nahi hui: ${err.code || "Firebase error"}`;
+
+  }finally{
+    if(saveBtn){
+      saveBtn.disabled = false;
+      saveBtn.textContent = "Save Profile";
+    }
+  }
+}
+
+async function uploadProfilePhoto(){
+  if(!currentUser){
+    $("profileSaveMsg").textContent = "Pehle login karein.";
+    return;
+  }
+
+  const file = $("profilePhotoFile").files[0];
+
+  if(!file){
+    $("profileSaveMsg").textContent = "Pehle photo select karein.";
+    return;
+  }
+
+  if(!file.type.startsWith("image/")){
+    $("profileSaveMsg").textContent = "Sirf image file upload karein.";
+    return;
+  }
+
+  if(file.size > 5 * 1024 * 1024){
+    $("profileSaveMsg").textContent = "Photo 5 MB se chhoti honi chahiye.";
+    return;
+  }
+
+  $("profileSaveMsg").textContent = "Photo Firebase Storage me upload ho rahi hai...";
+
+  try{
+    const extension = (file.name.split(".").pop() || "jpg").toLowerCase();
+    const fileRef = ref(
+      storage,
+      `profilePhotos/${currentUser.uid}/profile_${Date.now()}.${extension}`
+    );
+
+    await uploadBytes(fileRef, file);
+    const url = await getDownloadURL(fileRef);
+
+    $("profilePhotoURL").value = url;
+    $("profileSaveMsg").textContent =
+      "✓ Photo upload ho gayi. Ab Save Profile dabaiye.";
+
+  }catch(err){
+    console.error("Photo upload error:", err);
+
+    $("profileSaveMsg").textContent =
+      err.code === "storage/unauthorized"
+        ? "Storage permission denied. storage.rules publish karein."
+        : `Photo upload nahi hui: ${err.code || "Firebase Storage error"}`;
+  }
+}
+
+
+
+function firebaseConfigErrorMessage(err){
+  if(!err) return "";
+  if(err.code === "auth/api-key-not-valid"){
+    return "Firebase API key invalid hai. Firebase Project Settings → General → Your apps → Web app se current config copy karein.";
+  }
+  return "";
+}
+
+function firebaseEnvironmentHint(){
+  const hint = $("firebaseAuthHint");
+  if(!hint) return;
+
+  if(location.protocol === "file:" || location.protocol === "content:"){
+    hint.textContent =
+      "Note: Firebase Auth ko HTTPS hosting (Netlify/Firebase Hosting) par run karein. Local content:// file par Auth/OTP fail ho sakta hai.";
+  }
+}
+
+function updateAccountUI(){
+  const logged=!!currentUser;
+
+  if($("loginBtn"))
+    $("loginBtn").textContent=logged ? "My Profile" : "Login";
+
+  if($("accountStatus"))
+    $("accountStatus").textContent =
+      logged ? `Logged in: ${currentUser.email || currentUser.phoneNumber || "Account"}` : "Not logged in";
+
+  if($("logoutBtn"))
+    $("logoutBtn").style.display=logged ? "inline-flex" : "none";
+}
+
+async function logoutUser(){ await signOut(auth); closeModal("profileEditorModal"); }
+function toggleMobileMenu(){ $("mobileMenu").classList.toggle("show"); }
+function toggleHeart(btn){ btn.textContent=btn.textContent.trim()==="♡" ? "♥" : "♡"; }
+function showModal(id){ $(id).classList.add("show"); document.body.style.overflow="hidden"; }
+function closeModal(id){ const el=$(id); if(el) el.classList.remove("show"); if(!document.querySelector(".modal.show")) document.body.style.overflow=""; }
+
+window.addEventListener("click",e=>{
+  if(e.target.classList.contains("modal")){
+    e.target.classList.remove("show");
+    if(!document.querySelector(".modal.show")) document.body.style.overflow="";
+  }
+});
+
+window.openAuth=openAuth; window.toggleAuth=toggleAuth; window.submitAuth=submitAuth; window.openOtpLogin=openOtpLogin; window.sendMobileOtp=sendMobileOtp; window.verifyMobileOtp=verifyMobileOtp;
+window.startCreateProfile=startCreateProfile; window.openProfileEditor=openProfileEditor; window.saveProfile=saveProfile; window.uploadProfilePhoto=uploadProfilePhoto;
+window.logoutUser=logoutUser; window.toggleMobileMenu=toggleMobileMenu; window.filterProfiles=filterProfiles;
+window.clearSearch=clearSearch; window.viewProfile=viewProfile; window.unlockContact=unlockContact;
+window.simulatePayment=simulatePayment; window.toggleHeart=toggleHeart; window.sendInterest=sendInterest;
+window.showModal=showModal; window.closeModal=closeModal;
+
+firebaseEnvironmentHint();
+
+onAuthStateChanged(auth, user => {
+  currentUser=user;
+  updateAccountUI();
+});
+
+window.allProfiles = [...demoProfiles];
+renderProfiles(window.allProfiles);
+loadFirebaseProfiles();
+</script>
+</body>
+</html>
