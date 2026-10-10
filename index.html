@@ -100,6 +100,48 @@ a{text-decoration:none;color:inherit}
 .floating-note{position:absolute;background:#fff;border:1px solid #f0dce4;box-shadow:0 15px 38px rgba(93,29,50,.12);border-radius:13px;padding:11px 14px;font-size:12px;font-weight:800;z-index:3}
 .note-top{left:-20px;top:55px}.note-bottom{right:-5px;bottom:52px}
 
+/* RIGHT SIDE SLIDER */
+
+.hero-right{
+  flex:1;
+  min-width:300px;
+  width:100%;
+}
+
+.hero-slider{
+  width:100%;
+  max-width:500px;
+  margin:auto;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.slides{
+  display:flex;
+  transition:transform 0.6s ease-in-out;
+}
+
+.slides img{
+  width:100%;
+  min-width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+  flex-shrink:0;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  .hero-section{
+    flex-direction:column;
+  }
+
+  .slides img{
+    height:240px;
+  }
+}
+
+
 .search-section{margin-top:-28px;position:relative;z-index:5}
 .search-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
 .search-heading span{font-size:12px;font-weight:800;color:var(--primary);text-transform:uppercase;letter-spacing:1.2px}
@@ -195,7 +237,7 @@ a{text-decoration:none;color:inherit}
 .pay-btn{width:100%;border:0;background:var(--primary);color:#fff;padding:13px;border-radius:12px;font-weight:900}.demo-note{font-size:10px!important;color:#9a8f95!important;margin-top:12px!important}
 .success-modal{text-align:center;max-width:440px}.success-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#eaf8f0;color:#19824a;font-size:28px;font-weight:900;margin:0 auto 14px}.success-modal h2{font-family:"Playfair Display",serif;font-size:34px;margin:5px 0}.success-modal>p{font-size:13px;color:var(--muted)}
 .contact-preview{margin:20px 0;text-align:left;background:#faf6f8;border:1px solid var(--line);border-radius:14px;padding:15px;display:grid;gap:8px}.contact-preview div{font-size:12px}.contact-preview b{display:inline-block;width:90px}.full-width{width:100%;border:0}
-.profile-modal-card{max-width:620px}.detail-cover{height:200px;border-radius:18px;background:linear-gradient(135deg,#ffe6ef,#f4bfd1);display:grid;place-items:center;margin-bottom:20px}.detail-avatar{width:112px;height:112px;border-radius:50%;background:#ffffffaa;border:5px solid #fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:52px;color:#b42753}.detail-heading{display:flex;justify-content:space-between;gap:15px}.detail-heading h2{font-family:"Playfair Display",serif;font-size:33px;margin:0}.detail-heading p{margin:5px 0 0;color:var(--muted);font-size:12px}.detail-match{background:#fff0f5;color:var(--primary);padding:8px 10px;border-radius:20px;height:max-content;font-size:11px;font-weight:900}
+.profile-modal-card{max-width:620px}.detail-cover{height:330px;border-radius:18px;background:linear-gradient(135deg,#ffe6ef,#f4bfd1);display:grid;place-items:center;margin-bottom:20px;overflow:hidden}.detail-cover img{width:100%;height:100%;object-fit:contain;display:block}.detail-avatar{width:112px;height:112px;border-radius:50%;background:#ffffffaa;border:5px solid #fff;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:52px;color:#b42753}.detail-heading{display:flex;justify-content:space-between;gap:15px}.detail-heading h2{font-family:"Playfair Display",serif;font-size:33px;margin:0}.detail-heading p{margin:5px 0 0;color:var(--muted);font-size:12px}.detail-match{background:#fff0f5;color:var(--primary);padding:8px 10px;border-radius:20px;height:max-content;font-size:11px;font-weight:900}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.detail-box{background:#faf6f8;border:1px solid #f0e6ea;border-radius:12px;padding:12px}.detail-box small{display:block;color:#988d93;font-size:9px;font-weight:900;letter-spacing:.6px;margin-bottom:5px}.detail-box b{font-size:12px}
 .locked-contact{background:#fff0f5;border:1px solid #f2ccd9;border-radius:13px;padding:15px;margin-top:10px}.locked-contact b{display:block;font-size:13px}.locked-contact span{font-size:11px;color:#786a71}
 .profile-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.profile-modal-actions button{padding:12px;border-radius:11px;font-weight:800}.interest-outline{background:#fff;border:1px solid var(--line)}.unlock-now{background:var(--primary);border:1px solid var(--primary);color:#fff}
@@ -377,35 +419,17 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <div class="hero-visual">
-      <div class="floating-note note-top">✓ Profile verified</div>
+   
       <div class="feature-card">
         <div class="cover-gradient">
-          <div class="profile-photo-large">A</div>
-          <span class="match-pill">94% Match</span>
-        </div>
         <div class="feature-content">
           <div class="name-row">
             <div>
-              <h3>Ananya, 26</h3>
-              <p>Lucknow, Uttar Pradesh</p>
-            </div>
-            <span class="verified">✓</span>
-          </div>
-
-          <div class="detail-chips">
-            <span>Software Professional</span>
-            <span>B.Tech</span>
-            <span>Never Married</span>
-          </div>
-
-          <div class="feature-actions">
-            <button class="ghost-btn">♡ Shortlist</button>
-            <button class="pink-btn">♥ Send Interest</button>
-          </div>
-        </div>
-      </div>
-      <div class="floating-note note-bottom">🔒 Contact unlock ₹51</div>
-    </div>
+               <div class="hero-image">
+        <div class="hero-slider">
+ <div class="slides">
+   <img src="hero.png">
+    <img src="https://unsplash.com/photos/indian-traditional-wedding-ceremony-photography-g3ppTBTQam8">
   </div>
 </section>
 
@@ -896,8 +920,8 @@ async function viewProfile(id){
   if(!p) return;
   selectedProfile = p;
   $("profileDetail").innerHTML = `
-    <div class="detail-cover" ${p.photoURL ? `style="background-image:url('${escapeHtml(p.photoURL)}');background-size:cover;background-position:center"` : ""}>
-      ${!p.photoURL ? `<div class="detail-avatar">${escapeHtml((p.initial || p.name || "?").charAt(0).toUpperCase())}</div>` : ""}
+    <div class="detail-cover">
+      ${p.photoURL ? `<img src="${escapeHtml(p.photoURL)}" alt="${escapeHtml(p.name || "Profile photo")}">` : `<div class="detail-avatar">${escapeHtml((p.initial || p.name || "?").charAt(0).toUpperCase())}</div>`}
     </div>
     <div class="detail-heading">
       <div>
